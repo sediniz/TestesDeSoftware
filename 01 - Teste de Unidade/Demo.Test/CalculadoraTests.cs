@@ -80,4 +80,17 @@ public class CalculadoraTests
         Assert.Equal(total, resultado);
     }
 
+    [Fact]
+    public void Calculadora_Somar_NaoDeveRetornarIgual()
+    {
+        //arrange
+        var calculadora = new Calculadora();
+
+        //act
+        var resultado = calculadora.Somar(10, 20);
+
+        //assert
+        Assert.NotEqual(0, resultado); //verifica se o resultado não é igual a 0
+    }
+
 }
